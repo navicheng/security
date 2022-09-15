@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.category.CategoryMapper">
+
+    <select id="getAllCategory" resultType="gcxy.security.bean.Category">
+    select * from category;
+</select>
+    <select id="getAllCategoryId" resultType="Integer">
+    select category_id from category;
+</select>
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.exceltemplate.ExceltemplateMapper">
+
+    <insert id="insertSchapter" parameterType="gcxy.security.bean.Schapter">
+      insert into schapter (chapter_name,chapter_id,category_id)values (#{chapterName},#{chapterId},#{categoryId})
+  </insert>
+    <insert id="insertSecurity" parameterType="gcxy.security.bean.Security">
+      insert into security (danger_source_name,examination_content_id,category_id,chapter_id,type_name,type_id,score)
+      values(#{dangerSourceName},#{examinationContentId},#{categoryId},#{chapterId},#{typeName},#{typeId},#{score})
+    </insert>
+    <insert id="insertScontent" parameterType="gcxy.security.bean.Scontent">
+      insert into scontent (content,min_score,max_score,examination_content_id,regulation_id) values (#{content},#{minScore},#{maxScore},#{examinationContentId},#{regulationId});
+    </insert>
+  <insert id="insertSregulation" parameterType="gcxy.security.bean.Sregulation">
+    insert into sregulation(regulation_title,regulation_content, regulation_id)values (#{regulationTitle},#{regulationContent},#{regulationId})
+  </insert>
+    <!--<delete id="deleteSecurityRepeatData">
+      DELETE FROM security WHERE id not in (select t.max_id from (select max(id) as max_id from security group by danger_source_name) as t);
+    </delete>-->
+  <delete id="deleteSecurityRepeatData" parameterType="string">
+      DELETE FROM security WHERE id not in (select t.max_id from (select max(id) as max_id from security group by danger_source_name) as t) and chapter_id=#{chapterId};
+    </delete>
+   <!-- <delete id="deleteSchpaterRepeatData">
+    DELETE FROM schapter WHERE id not in (select t.max_id from (select max(id) as max_id from schapter group by chapter_name) as t);
+  </delete>-->
+  <delete id="deleteSchpaterRepeatData" parameterType="string">
+    DELETE FROM schapter WHERE id not in (select t.max_id from (select max(id) as max_id from schapter group by chapter_name) as t) and category_id=#{categoryId};
+  </delete>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.security.SecurityMapper">
+
+    <select id="getAllSecurityRecord" resultType="gcxy.security.bean.Security">
+    select * from security;
+</select>
+
+    <select id="getSecurityRecordByCategoryId" resultType="gcxy.security.bean.Security" parameterType="int">
+        select * from security where category_id=#{categoryId};
+    </select>
+
+    <select id="getSecurityRecordByTypeId" resultType="gcxy.security.bean.Security" parameterType="String">
+        select * from security where chapter_id=#{chapterId} and type_id=#{typeId}
+    </select>
+
+    <select id="getSecurityRecordByChapterId" resultType="gcxy.security.bean.Security" parameterType="String">
+        select * from security where chapter_id=#{chapterId}
+    </select>
+</mapper>

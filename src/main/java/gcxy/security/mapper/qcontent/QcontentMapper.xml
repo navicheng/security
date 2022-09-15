@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.qcontent.QcontentMapper">
+
+    <select id="getAllQcontent" resultType="gcxy.security.bean.Qcontent">
+    select * from qcontent ;
+</select>
+    <select id="getAllExaminationContentId" resultType="Integer">
+        select examination_content_id from qcontent;
+    </select>
+    <select id="getQcontentByExaminationContentId" resultType="gcxy.security.bean.Qcontent" parameterType="Integer">
+        select * from qcontent where examination_content_id=#{examinationContentId};
+    </select>
+
+</mapper>

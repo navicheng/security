@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.quality.QualityMapper">
+
+    <select id="getAllQualityRecord" resultType="gcxy.security.bean.Quality">
+    select * from quality;
+</select>
+
+    <select id="getQualityRecordByCategoryId" resultType="gcxy.security.bean.Quality" parameterType="int">
+        select * from quality where category_id=#{categoryId};
+    </select>
+
+</mapper>

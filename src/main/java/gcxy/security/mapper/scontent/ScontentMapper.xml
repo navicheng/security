@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.scontent.ScontentMapper">
+
+    <select id="getAllScontent" resultType="gcxy.security.bean.Scontent">
+    select * from scontent ;
+</select>
+    <select id="getAllExaminationContentId" resultType="String">
+        select examination_content_id from scontent;
+    </select>
+    <select id="getScontentByExaminationContentId" resultType="gcxy.security.bean.Scontent" parameterType="String">
+        select * from scontent where examination_content_id=#{examinationContentId};
+    </select>
+
+</mapper>

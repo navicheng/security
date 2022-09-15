@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.plan.PlanMapper">
+    <select id="getPlanByUserId" resultType="gcxy.security.bean.Plan" parameterType="gcxy.security.bean.Plan">
+        select * from plan where user_id = #{userId}
+    </select>
+
+    <select id="getPlanByPlanId" resultType="gcxy.security.bean.Plan" parameterType="gcxy.security.bean.Plan">
+        select * from plan where plan_id = #{planId}
+    </select>
+
+    <insert id="savePlan" parameterType="gcxy.security.bean.Plan"  useGeneratedKeys="true" keyProperty="planId">
+      insert into plan (user_id,chapter_ids,plan_date,targets,plan_name,category_id)
+      values
+      (#{userId},#{chapterIds},#{planDate},#{targets,jdbcType=VARCHAR},#{planName,jdbcType=VARCHAR},#{categoryId,jdbcType=VARCHAR});
+    </insert>
+
+    <update id="updatePlan" parameterType="gcxy.security.bean.Plan" >
+        update plan
+        <trim prefix="set" suffixOverrides=",">
+            chapter_ids=#{chapterIds},
+            <if test="targets!=null">targets=#{targets},</if>
+            <if test="planName!=null">plan_name=#{planName},</if>
+            <if test="categoryId!=null">category_id=#{categoryId},</if>
+            <if test="planDate!=null">plan_date=#{planDate},</if>
+        </trim>
+        where plan_id=#{planId}
+    </update>
+
+    <delete id="deletePlanByPlanId" parameterType="gcxy.security.bean.Plan">
+        delete from plan where
+		plan_id=#{planId}
+    </delete>
+
+</mapper>

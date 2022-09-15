@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.qregulation.QregulationMapper">
+
+    <select id="getAllQregulation" resultType="gcxy.security.bean.Qregulation">
+    select * from qregulation;
+</select>
+
+    <select id="getQregulationByRegulationId" resultType="gcxy.security.bean.Qregulation" parameterType="int">
+          select * from qregulation where regulation_id=#{regulationId};
+    </select>
+
+</mapper>

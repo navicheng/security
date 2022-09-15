@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Main-Class: gcxy.security.SecurityApplication
+Class-Path: jackson-annotations-2.11.3.jar commons-collections4-4.1.jar 
+ logback-classic-1.2.3.jar classmate-1.5.1.jar lombok-1.18.16.jar pdfbox
+ -2.0.20.jar jaxb-api-2.3.1.jar commons-codec-1.15.jar spring-plugin-met
+ adata-1.2.0.RELEASE.jar spring-boot-starter-json-2.4.0.jar springfox-sw
+ agger2-2.9.2.jar mybatis-spring-1.3.1.jar springfox-spring-web-2.9.2.ja
+ r log4j-api-2.13.3.jar spring-core-5.3.1.jar springfox-schema-2.9.2.jar
+  spring-jcl-5.3.1.jar mapstruct-1.2.0.Final.jar spring-boot-2.4.0.jar f
+ ontbox-2.0.9.jar logback-core-1.2.3.jar poi-ooxml-3.17.jar spring-plugi
+ n-core-1.2.0.RELEASE.jar springfox-spi-2.9.2.jar springfox-core-2.9.2.j
+ ar swagger-annotations-1.5.20.jar byte-buddy-1.10.18.jar swagger-bootst
+ rap-ui-1.9.6.jar poi-3.17.jar spring-boot-starter-tomcat-2.4.0.jar itex
+ t-asian-5.2.0.jar mybatis-spring-boot-autoconfigure-1.3.1.jar xmlbeans-
+ 2.6.0.jar springfox-swagger-common-2.9.2.jar tomcat-embed-core-9.0.39.j
+ ar spring-expression-5.3.1.jar spring-tx-5.3.1.jar spring-boot-starter-
+ web-2.4.0.jar xmlunit-core-2.7.0.jar spring-boot-starter-jdbc-2.4.0.jar
+  spring-webmvc-5.3.1.jar tomcat-embed-websocket-9.0.39.jar commons-logg
+ ing-1.2.jar spring-web-5.3.1.jar poi-ooxml-schemas-3.17.jar jackson-dat
+ atype-jdk8-2.11.3.jar spring-boot-starter-logging-2.4.0.jar jackson-dat
+ abind-2.11.3.jar mybatis-3.5.3.jar spring-aop-5.3.1.jar curvesapi-1.04.
+ jar stax-api-1.0.1.jar javax.activation-api-1.2.0.jar commons-lang3-3.3
+ .2.jar guava-20.0.jar mysql-connector-java-8.0.22.jar swagger-models-1.
+ 5.20.jar HikariCP-3.4.5.jar snakeyaml-1.27.jar druid-1.0.29.jar spring-
+ jdbc-5.3.1.jar jackson-module-parameter-names-2.11.3.jar jakarta.el-3.0
+ .3.jar spring-beans-5.3.1.jar slf4j-api-1.7.30.jar itextpdf-5.5.13.jar 
+ mybatis-spring-boot-starter-1.3.1.jar spring-boot-starter-2.4.0.jar spr
+ ing-boot-autoconfigure-2.4.0.jar spring-context-5.3.1.jar jackson-datat
+ ype-jsr310-2.11.3.jar jackson-core-2.11.3.jar fastjson-1.2.43.jar javas
+ sist-3.25.0-GA.jar log4j-to-slf4j-2.13.3.jar jul-to-slf4j-1.7.30.jar ja
+ karta.annotation-api-1.3.5.jar
+

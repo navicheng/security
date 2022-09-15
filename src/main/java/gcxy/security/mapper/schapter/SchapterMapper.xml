@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gcxy.security.mapper.schapter.SchapterMapper">
+    <select id="getAllSecurityChapter" resultType="gcxy.security.bean.Schapter">
+        select * from schapter;
+    </select>
+    <select id="getSecurityByCategoryId" resultType="gcxy.security.bean.Schapter" parameterType="String">
+        select * from schapter where category_id=#{categoryId}
+    </select>
+    <select id="getSchapterNameByChapterId" resultType="String" parameterType="string">
+        select chapter_name from schapter where chapter_id=#{chapterId}
+    </select>
+
+</mapper>
